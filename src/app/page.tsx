@@ -126,13 +126,13 @@ const ProductCard = ({
 
 const BrizaOptions = () => {
   const options = [
-    { id: '48V-15Ah', voltage: '48V', ah: '15Ah', price: '1.210,00 €', range: '~30 km' },
-    { id: '48V-20Ah', voltage: '48V', ah: '20Ah', price: '1.450,00 €', range: '~35 km' },
-    { id: '48V-24Ah', voltage: '48V', ah: '24Ah', price: '1.570,00 €', range: '~50 km' },
-    { id: '48V-30Ah', voltage: '48V', ah: '30Ah', price: '1.690,00 €', range: '~65 km' },
-    { id: '60V-20Ah', voltage: '60V', ah: '20Ah', price: '1.450,00 €', range: '~50 km' },
-    { id: '60V-24Ah', voltage: '60V', ah: '24Ah', price: '1.650,00 €', range: '~60 km' },
-    { id: '60V-30Ah', voltage: '60V', ah: '30Ah', price: '1.850,00 €', range: '~70 km' },
+    { id: '48V-15Ah', voltage: '48V', ah: '15Ah', price: '1.210,00 €', range: 'Aprox: 30 km' },
+    { id: '48V-20Ah', voltage: '48V', ah: '20Ah', price: '1.450,00 €', range: 'Aprox: 35 km' },
+    { id: '48V-24Ah', voltage: '48V', ah: '24Ah', price: '1.570,00 €', range: 'Aprox: 50 km' },
+    { id: '48V-30Ah', voltage: '48V', ah: '30Ah', price: '1.690,00 €', range: 'Aprox: 65 km' },
+    { id: '60V-20Ah', voltage: '60V', ah: '20Ah', price: '1.450,00 €', range: 'Aprox: 50 km' },
+    { id: '60V-24Ah', voltage: '60V', ah: '24Ah', price: '1.650,00 €', range: 'Aprox: 60 km' },
+    { id: '60V-30Ah', voltage: '60V', ah: '30Ah', price: '1.850,00 €', range: 'Aprox: 70 km' },
   ];
   
   const [selectedOption, setSelectedOption] = useState(options[0]);
@@ -165,14 +165,14 @@ const BrizaOptions = () => {
             <optgroup label="Modelos 48V">
               {options.filter(o => o.voltage === '48V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
-                  {option.ah} ({option.range})
+                  {option.id} ({option.range})
                 </SelectItem>
               ))}
             </optgroup>
             <optgroup label="Modelos 60V">
               {options.filter(o => o.voltage === '60V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
-                  {option.ah} ({option.range})
+                  {option.id} ({option.range})
                 </SelectItem>
               ))}
             </optgroup>
@@ -562,5 +562,3 @@ export default function OnePageVelocipedes() {
     </div>
   );
 }
-
-    
