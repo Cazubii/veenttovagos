@@ -452,7 +452,7 @@ export default function OnePageVelocipedes() {
                 <Shield className="w-4 h-4" /> Garantia até 24 meses
               </div>
               <div className="flex items-center gap-2">
-                <Battery className="w-4 h-4" /> Autonomia até 70 km*
+                <Battery className="w-4 h-4" /> Autonomia entre 30 e 80 km
               </div>
             </div>
           </motion.div>
@@ -465,11 +465,6 @@ export default function OnePageVelocipedes() {
           >
             <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-2xl border border-zinc-800 grid place-items-center">
               <Bike className="w-40 h-40 text-zinc-600" aria-hidden />
-            </div>
-            <div className="absolute -bottom-4 -right-4 bg-zinc-900 border border-zinc-800 rounded-2xl px-4 py-3 shadow-xl">
-              <div className="text-xs text-zinc-400">
-                *Autonomia variável conforme uso.
-              </div>
             </div>
           </motion.div>
         </div>
