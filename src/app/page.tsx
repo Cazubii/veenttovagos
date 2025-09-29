@@ -691,7 +691,7 @@ export default function OnePageVelocipedes() {
       </Section>
 
       <footer id="contato" className="border-t border-zinc-800 mt-16">
-        <Section className="py-12">
+        <Section className="py-12" id={''} >
           <div className="grid md:grid-cols-3 gap-8 text-sm">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
