@@ -14,6 +14,14 @@ import {
   ChevronRight,
   MessageSquare,
 } from 'lucide-react';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -55,16 +63,18 @@ const ProductCard = ({
   range,
   speed,
   imgAlt = 'Moto elétrica',
+  children,
 }: {
   title: string;
-  price: string;
-  range: string;
-  speed: string;
+  price?: string;
+  range?: string;
+  speed?: string;
   imgAlt?: string;
+  children?: React.ReactNode;
 }) => (
   <motion.div
     variants={fadeUp}
-    className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg"
+    className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col"
   >
     <div className="aspect-[16/9] bg-gradient-to-b from-zinc-800 to-zinc-900 flex items-center justify-center">
       <Bike
@@ -73,18 +83,26 @@ const ProductCard = ({
       />
       <span className="sr-only">{imgAlt}</span>
     </div>
-    <div className="p-6 space-y-3">
+    <div className="p-6 space-y-3 flex-grow flex flex-col">
       <h3 className="text-lg font-semibold text-zinc-100">{title}</h3>
-      <p className="text-3xl font-bold text-zinc-50">{price}</p>
-      <div className="flex gap-4 text-zinc-400 text-sm">
-        <span className="flex items-center gap-2">
-          <Battery className="w-4 h-4" /> {range}
-        </span>
-        <span className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4" /> {speed}
-        </span>
-      </div>
-      <div className="pt-3 flex gap-3">
+      {price && <p className="text-3xl font-bold text-zinc-50">{price}</p>}
+      {children ? (
+        <div className="flex-grow">{children}</div>
+      ) : (
+        <div className="flex gap-4 text-zinc-400 text-sm">
+          {range && (
+            <span className="flex items-center gap-2">
+              <Battery className="w-4 h-4" /> {range}
+            </span>
+          )}
+          {speed && (
+            <span className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4" /> {speed}
+            </span>
+          )}
+        </div>
+      )}
+      <div className="pt-3 flex gap-3 mt-auto">
         <a
           href="#comprar"
           className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 px-4 py-2 text-zinc-200 hover:bg-zinc-800"
@@ -103,6 +121,56 @@ const ProductCard = ({
     </div>
   </motion.div>
 );
+
+const BrizaTable = () => {
+  const data48V = [
+    { ah: '15Ah', price: '1.210,00 €', range: '~30 km' },
+    { ah: '20Ah', price: '1.450,00 €', range: '~35 km' },
+    { ah: '24Ah', price: '1.570,00 €', range: '~50 km' },
+    { ah: '30Ah', price: '1.690,00 €', range: '~65 km' },
+  ];
+  const data60V = [
+    { ah: '20Ah', price: '1.450,00 €', range: '~50 km' },
+    { ah: '24Ah', price: '1.650,00 €', range: '~60 km' },
+    { ah: '30Ah', price: '1.850,00 €', range: '~70 km' },
+  ];
+
+  const renderTable = (voltage: string, data: typeof data48V) => (
+    <>
+      <h4 className="font-semibold text-zinc-200 mt-4 mb-2">
+        <Battery className="w-4 h-4 inline mr-2" /> Modelos com bateria {voltage}
+      </h4>
+      <Table className="text-zinc-400 text-xs">
+        <TableHeader>
+          <TableRow className="border-zinc-800">
+            <TableHead className="text-zinc-300">Bateria</TableHead>
+            <TableHead className="text-zinc-300">Autonomia</TableHead>
+            <TableHead className="text-right text-zinc-300">Preço</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {data.map((item) => (
+            <TableRow key={item.ah} className="border-zinc-800">
+              <TableCell>{item.ah}</TableCell>
+              <TableCell>{item.range}</TableCell>
+              <TableCell className="text-right">{item.price}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </>
+  );
+
+  return (
+    <div className="text-sm">
+      {renderTable('48V', data48V)}
+      {renderTable('60V', data60V)}
+       <p className="flex items-center gap-2 text-zinc-400 text-xs mt-3">
+          <Sparkles className="w-4 h-4" /> Até 25 km/h
+        </p>
+    </div>
+  );
+};
 
 export default function OnePageVelocipedes() {
   return (
@@ -228,19 +296,16 @@ export default function OnePageVelocipedes() {
               Comprar agora <ChevronRight className="w-4 h-4" />
             </a>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
             <ProductCard
               title="Scooter Power"
               price="€990,00"
               range="30 km"
               speed="Até 25 km/h"
             />
-            <ProductCard
-              title="Scooter Briza"
-              price="€1.210,00"
-              range="30 km"
-              speed="Até 25 km/h"
-            />
+            <ProductCard title="Scooter Briza">
+              <BrizaTable />
+            </ProductCard>
             <ProductCard
               title="Scooter Nice"
               price="€1.250,00"
