@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   ShoppingCart,
@@ -17,10 +18,13 @@ import {
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { PlaceHolderImages, type ImagePlaceholder } from '@/lib/placeholder-images';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -61,26 +65,35 @@ const ProductCard = ({
   price,
   range,
   speed,
-  imgAlt = 'Moto elétrica',
+  image,
   children,
 }: {
   title: string;
   price?: string;
   range?: string;
   speed?: string;
-  imgAlt?: string;
+  image?: ImagePlaceholder;
   children?: React.ReactNode;
 }) => (
   <motion.div
     variants={fadeUp}
     className="group bg-zinc-900/60 border border-zinc-800 rounded-2xl overflow-hidden shadow-lg flex flex-col"
   >
-    <div className="aspect-[16/9] bg-gradient-to-b from-zinc-800 to-zinc-900 flex items-center justify-center">
-      <Bike
-        className="w-20 h-20 text-zinc-600 group-hover:text-zinc-400 transition-colors"
-        aria-hidden
-      />
-      <span className="sr-only">{imgAlt}</span>
+    <div className="relative aspect-[4/3] bg-gradient-to-b from-zinc-800 to-zinc-900 flex items-center justify-center">
+      {image ? (
+        <Image 
+          src={image.imageUrl}
+          alt={image.description}
+          fill
+          className="object-contain group-hover:scale-105 transition-transform"
+          data-ai-hint={image.imageHint}
+        />
+      ) : (
+        <Bike
+          className="w-20 h-20 text-zinc-600 group-hover:text-zinc-400 transition-colors"
+          aria-hidden
+        />
+      )}
     </div>
     <div className="p-6 space-y-3 flex-grow flex flex-col">
       <h3 className="text-lg font-semibold text-zinc-100">{title}</h3>
@@ -162,20 +175,22 @@ const PowerOptions = () => {
             <SelectValue placeholder="Selecione uma opção" />
           </SelectTrigger>
           <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-200">
-            <optgroup label="Modelos 48V">
+            <SelectGroup>
+              <SelectLabel>Modelos 48V</SelectLabel>
               {options.filter(o => o.voltage === '48V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
                   {option.voltage} {option.ah} ({option.range})
                 </SelectItem>
               ))}
-            </optgroup>
-            <optgroup label="Modelos 60V">
+            </SelectGroup>
+            <SelectGroup>
+              <SelectLabel>Modelos 60V</SelectLabel>
               {options.filter(o => o.voltage === '60V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
                   {option.voltage} {option.ah} ({option.range})
                 </SelectItem>
               ))}
-            </optgroup>
+            </SelectGroup>
           </SelectContent>
         </Select>
       </div>
@@ -222,20 +237,22 @@ const BrizaOptions = () => {
             <SelectValue placeholder="Selecione uma opção" />
           </SelectTrigger>
           <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-200">
-            <optgroup label="Modelos 48V">
+            <SelectGroup>
+              <SelectLabel>Modelos 48V</SelectLabel>
               {options.filter(o => o.voltage === '48V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
                   {option.voltage} {option.ah} ({option.range})
                 </SelectItem>
               ))}
-            </optgroup>
-            <optgroup label="Modelos 60V">
+            </SelectGroup>
+            <SelectGroup>
+              <SelectLabel>Modelos 60V</SelectLabel>
               {options.filter(o => o.voltage === '60V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
                   {option.voltage} {option.ah} ({option.range})
                 </SelectItem>
               ))}
-            </optgroup>
+            </SelectGroup>
           </SelectContent>
         </Select>
       </div>
@@ -244,6 +261,8 @@ const BrizaOptions = () => {
 };
 
 export default function OnePageVelocipedes() {
+  const scooterPowerImage = PlaceHolderImages.find(img => img.id === 'scooter-power');
+
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-900 via-black to-black text-zinc-200">
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-zinc-800">
@@ -368,7 +387,7 @@ export default function OnePageVelocipedes() {
             </a>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-            <ProductCard title="Scooter Power">
+            <ProductCard title="Scooter Power" image={scooterPowerImage}>
               <PowerOptions />
             </ProductCard>
             <ProductCard title="Scooter Briza">
