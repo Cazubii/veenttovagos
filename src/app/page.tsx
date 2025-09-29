@@ -230,21 +230,33 @@ export default function OnePageVelocipedes() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <ProductCard
-              title="Urban Lite"
-              price="€899"
-              range="60–70 km"
+              title="Scooter Power"
+              price="€990,00"
+              range="30 km"
               speed="Até 25 km/h"
             />
             <ProductCard
-              title="City Pro"
-              price="€1.149"
-              range="70–80 km"
+              title="Scooter Briza"
+              price="€1.210,00"
+              range="30 km"
               speed="Até 25 km/h"
             />
             <ProductCard
-              title="Compacto X"
-              price="€799"
-              range="50–60 km"
+              title="Scooter Nice"
+              price="€1.250,00"
+              range="30 km"
+              speed="Até 25 km/h"
+            />
+            <ProductCard
+              title="Triciclo"
+              price="€1.690,00"
+              range="40 km"
+              speed="Até 25 km/h"
+            />
+            <ProductCard
+              title="Quaciclo Guido"
+              price="€2.890,00"
+              range="50 km"
               speed="Até 25 km/h"
             />
           </div>
