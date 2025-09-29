@@ -614,6 +614,16 @@ export default function OnePageVelocipedes() {
               </figure>
             ))}
           </div>
+          <div className="text-center mt-8">
+            <a
+              href="https://www.google.com/search?q=Veentto+-+Vagos&stick=H4sIAAAAAAAA_-NgU1IxqEgxMk5Kski1sDCwTDYzT7IyqDAzMTM3NE6zME1MtjQ3NjdbxMoflpqaV1KSr6CrEJaYnl8MANabo_Q6AAAA&hl=pt-BR&mat=CaIzzB7AoUgyElcBYJahaTOCBWSVAIli1y6aeDXb4D95BeUQ4q_2JNC3ogAImNjWHo8-NYctBAwBHgRsRZCjStt8HiEAqc6lYNRSxdPEHWGsooT0-zPzM4HEoW-RdHxNo2s&authuser=3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 px-5 py-3 hover:bg-zinc-800"
+            >
+              Ver todas as avaliações no Google
+            </a>
+          </div>
         </div>
       </Section>
 
