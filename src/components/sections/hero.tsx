@@ -1,35 +1,45 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
+
   return (
-    <section className="relative w-full overflow-hidden bg-card">
-      <div className="container relative z-10 animate-in fade-in slide-in-from-bottom-12 duration-1000">
-        <div className="flex min-h-[60vh] flex-col items-center justify-center text-center md:min-h-[80vh]">
-          <h1 className="font-headline text-5xl font-extrabold tracking-tight md:text-7xl lg:text-8xl">
-            Realce sua Beleza,
-            <br />
-            <span className="text-primary">Abrace o Amor-Próprio</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl">
-            Descubra produtos que não apenas realçam sua beleza exterior, mas também nutrem sua confiança interior. Bem-vinda à Veentto.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="#products">Ver Produtos</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="#about">Saiba Mais</Link>
-            </Button>
+    <section className="relative w-full overflow-hidden">
+      <div className="container grid md:grid-cols-2 gap-8 items-center">
+        <div className="relative z-10 animate-in fade-in slide-in-from-bottom-12 duration-1000 text-center md:text-left">
+          <div className="py-12 md:py-24">
+            <h1 className="font-headline text-5xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
+              Cabelo & Corpo
+              <br />
+              <span className="text-primary">Perfumados</span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl mx-auto md:mx-0">
+              Conheça nossas linhas de Body Splash e Hair Mist e se apaixone por
+              fragrâncias que te acompanham o dia todo.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+              <Button size="lg" asChild>
+                <Link href="#products">Ver Produtos</Link>
+              </Button>
+            </div>
           </div>
         </div>
+        <div className="relative h-96 md:h-full min-h-[60vh] animate-in fade-in duration-1000">
+          {heroImage && (
+            <Image
+              src={heroImage.imageUrl}
+              alt={heroImage.description}
+              fill
+              className="object-cover"
+              data-ai-hint={heroImage.imageHint}
+              priority
+            />
+          )}
+        </div>
       </div>
-      <div 
-        className="absolute inset-0 z-0 opacity-20" 
-        style={{
-          backgroundImage: 'radial-gradient(circle at center, hsl(var(--primary) / 0.1), transparent 60%)',
-        }}
-      />
     </section>
   );
 }

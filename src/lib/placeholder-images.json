@@ -2,21 +2,21 @@
   "placeholderImages": [
     {
       "id": "product1",
-      "description": "A beautiful cosmetic product in elegant packaging.",
-      "imageUrl": "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb3NtZXRpYyUyMHByb2R1Y3R8ZW58MHx8fHwxNzU5MTUxNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cosmetic product"
+      "description": "Frasco de Body Splash Veentto com líquido rosa claro.",
+      "imageUrl": "https://images.unsplash.com/photo-1682965636756-332746a1cc28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxib2R5JTIwc3BsYXNofGVufDB8fHx8MTc1OTE2MzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "body splash"
     },
     {
       "id": "product2",
-      "description": "A set of skincare bottles on a clean background.",
-      "imageUrl": "https://images.unsplash.com/photo-1591130901921-3f0652bb3915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxza2luY2FyZSUyMHNldHxlbnwwfHx8fDE3NTkxNjMyNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "skincare set"
+      "description": "Frasco de Hair Mist Veentto com líquido transparente.",
+      "imageUrl": "https://images.unsplash.com/photo-1586835319938-307d4746d12d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYWlyJTIwbWlzdHxlbnwwfHx8fDE3NTkxNjM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hair mist"
     },
     {
       "id": "product3",
-      "description": "A luxurious face cream jar.",
-      "imageUrl": "https://images.unsplash.com/photo-1535031171703-48b1362baa98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYWNlJTIwY3JlYW18ZW58MHx8fHwxNzU5MTYzMjcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "face cream"
+      "description": "Kit com Body Splash e Hair Mist da Veentto.",
+      "imageUrl": "https://images.unsplash.com/photo-1599602502345-f0a25940cbec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9kdWN0JTIwa2l0fGVufDB8fHx8MTc1OTE2MzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "product kit"
     },
     {
       "id": "product4",
@@ -44,9 +44,9 @@
     },
     {
       "id": "hero",
-      "description": "Abstract background with pink and purple tones.",
-      "imageUrl": "https://images.unsplash.com/photo-1503455637927-730bce8583c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaW5rJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU5MDc1MTcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pink abstract"
+      "description": "Modelo segurando produtos da Veentto em um fundo de estúdio.",
+      "imageUrl": "https://images.unsplash.com/photo-1670201202815-ca549e223c6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZWwlMjBwcm9kdWN0c3xlbnwwfHx8fDE3NTkxNjM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "model products"
     }
   ]
 }
