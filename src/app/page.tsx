@@ -433,12 +433,12 @@ export default function OnePageVelocipedes() {
                   Email:{' '}
                   <a
                     className="underline hover:text-zinc-200"
-                    href="mailto:loja@veenttovagos.pt"
+                    href="mailto:veenttovagos@gmail.com"
                   >
-                    loja@veenttovagos.pt
+                    veenttovagos@gmail.com
                   </a>
                 </li>
-                <li>Loja: Rua Exemplo 123, Lisboa</li>
+                <li>Loja: Rua Dom Antonio dos Santos, 109B - Quintã, Vagos</li>
               </ul>
             </div>
             <div>
