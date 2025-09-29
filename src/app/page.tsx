@@ -54,7 +54,7 @@ const ProductCard = ({
   price,
   range,
   speed,
-  imgAlt = 'Velocípede elétrico',
+  imgAlt = 'Moto elétrica',
 }: {
   title: string;
   price: string;
@@ -111,10 +111,10 @@ export default function OnePageVelocipedes() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-zinc-100 text-zinc-900 grid place-items-center font-bold">
-              VE
+              VV
             </div>
             <span className="text-sm md:text-base font-semibold tracking-wide text-zinc-100">
-              Velocípedes Elétricos
+              Veentto Vagos
             </span>
           </a>
           <nav className="hidden md:flex items-center gap-6">
@@ -160,7 +160,7 @@ export default function OnePageVelocipedes() {
               <span className="text-zinc-300">sem carta</span> de condução
             </h1>
             <p className="text-lg text-zinc-400 max-w-prose">
-              Descubra a liberdade dos nossos velocípedes elétricos: práticos,
+              Descubra a liberdade dos nossos veículos elétricos: práticos,
               económicos e sustentáveis — ideais para a cidade.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -337,7 +337,7 @@ export default function OnePageVelocipedes() {
             {[
               {
                 q: 'Preciso de carta de condução?',
-                a: 'Não. Os nossos velocípedes elétricos estão limitados a 25 km/h, enquadrando-se nas regras que dispensam carta para uso em via pública (consulte a legislação local).',
+                a: 'Não. Nossos veículos estão limitados a 25 km/h, enquadrando-se nas regras que dispensam carta para uso em via pública (consulte a legislação local).',
               },
               {
                 q: 'Qual a autonomia?',
@@ -405,10 +405,10 @@ export default function OnePageVelocipedes() {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-zinc-100 text-zinc-900 grid place-items-center font-bold">
-                  VE
+                  VV
                 </div>
                 <span className="font-semibold text-zinc-100">
-                  Velocípedes Elétricos
+                  Veentto Vagos
                 </span>
               </div>
               <p className="text-zinc-400">
@@ -433,9 +433,9 @@ export default function OnePageVelocipedes() {
                   Email:{' '}
                   <a
                     className="underline hover:text-zinc-200"
-                    href="mailto:loja@velocipedes.pt"
+                    href="mailto:loja@veenttovagos.pt"
                   >
-                    loja@velocipedes.pt
+                    loja@veenttovagos.pt
                   </a>
                 </li>
                 <li>Loja: Rua Exemplo 123, Lisboa</li>
@@ -464,7 +464,7 @@ export default function OnePageVelocipedes() {
           </div>
           <div className="mt-10 pt-6 border-t border-zinc-800 text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p>
-              © {new Date().getFullYear()} Velocípedes Elétricos — Todos os
+              © {new Date().getFullYear()} Veentto Vagos — Todos os
               direitos reservados.
             </p>
             <p>Design em escala de cinza · Feito com ❤</p>
