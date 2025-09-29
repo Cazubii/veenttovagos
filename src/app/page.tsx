@@ -632,11 +632,11 @@ export default function OnePageVelocipedes() {
               },
               {
                 q: 'Qual a autonomia?',
-                a: 'Entre 50 e 80 km conforme o modelo, peso e condições de uso.',
+                a: 'Entre 30 e 80 km conforme o modelo, peso e condições de uso.',
               },
               {
                 q: 'Como é feita a compra a prestações?',
-                a: 'Disponibilizamos opções a crédito/parcerias. Fale connosco no WhatsApp para simulação imediata.',
+                a: 'Utilizamos o TPA da REDUNIQ que permite pagamento em até 6x exclusivo para quem possui cartão B.I.',
               },
               {
                 q: 'Há garantia?',
