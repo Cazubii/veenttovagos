@@ -165,14 +165,14 @@ const BrizaOptions = () => {
             <optgroup label="Modelos 48V">
               {options.filter(o => o.voltage === '48V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
-                  {option.id} ({option.range})
+                  {option.voltage} {option.ah} ({option.range})
                 </SelectItem>
               ))}
             </optgroup>
             <optgroup label="Modelos 60V">
               {options.filter(o => o.voltage === '60V').map(option => (
                 <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
-                  {option.id} ({option.range})
+                  {option.voltage} {option.ah} ({option.range})
                 </SelectItem>
               ))}
             </optgroup>
