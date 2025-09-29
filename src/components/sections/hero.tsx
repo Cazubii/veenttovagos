@@ -1,28 +1,44 @@
 import { Button } from '@/components/ui/button';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Image from 'next/image';
 
 export function Hero() {
+  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
+
   return (
-    <section
-      className="relative w-full py-20 md:py-32 bg-primary text-primary-foreground"
-      style={{
-        backgroundImage:
-          "repeating-linear-gradient(45deg, rgba(0,0,0,0.8) 25px, rgba(0,0,0,0.8) 50px, transparent 50px, transparent 75px, rgba(0,0,0,0.8) 75px), repeating-linear-gradient(-45deg, rgba(0,0,0,0.8) 25px, rgba(0,0,0,0.8) 50px, transparent 50px, transparent 75px, rgba(0,0,0,0.8) 75px)",
-        backgroundSize: '100px 100px',
-      }}
-    >
-      <div className="container mx-auto px-4 text-center">
-        <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter">
-          Alerta!
+    <section className="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center text-center">
+      {heroImage && (
+        <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          fill
+          className="object-cover"
+          data-ai-hint={heroImage.imageHint}
+          priority
+        />
+      )}
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="relative z-10 container mx-auto px-4 text-white">
+        <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-shadow-lg">
+          O Futuro é Elétrico
         </h1>
-        <p className="mt-2 text-4xl md:text-6xl font-bold text-white uppercase">
-          Seguro Obrigatório
+        <p className="mt-4 text-xl md:text-2xl max-w-2xl mx-auto font-light">
+          Descubra a liberdade de pilotar com zero emissões. Performance,
+          design e tecnologia em duas rodas.
         </p>
-        <div className="mt-8">
+        <div className="mt-8 flex justify-center gap-4">
           <Button
             size="lg"
-            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-4"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-4 rounded-full"
           >
-            Consulte seu agente de seguros
+            Ver Modelos
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="text-lg px-8 py-4 rounded-full border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground"
+          >
+            Agende um Test-Ride
           </Button>
         </div>
       </div>

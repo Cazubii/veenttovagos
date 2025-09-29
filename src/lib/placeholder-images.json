@@ -2,51 +2,51 @@
   "placeholderImages": [
     {
       "id": "product1",
-      "description": "Red electric scooter parked on a city street.",
-      "imageUrl": "https://images.unsplash.com/photo-1593032469478-6eea26403254?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMG1vdG9yY3ljbGV8ZW58MHx8fHwxNzU5MjU5MzY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Modern black electric motorcycle parked in a city.",
+      "imageUrl": "https://images.unsplash.com/photo-1620759310729-c702a0335027?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMG1vdG9yY3ljbGV8ZW58MHx8fHwxNzU5MjYwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "electric motorcycle"
     },
     {
       "id": "product2",
-      "description": "Red motorcycle helmet on a wooden surface.",
-      "imageUrl": "https://images.unsplash.com/photo-1576426863848-c21f68c6aa98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3RvcmN5Y2xlJTIwYWNjZXNzb3JpZXN8ZW58MHx8fHwxNzU5MjU5Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "motorcycle accessories"
+      "description": "Sleek matte black motorcycle helmet.",
+      "imageUrl": "https://images.unsplash.com/photo-1576426863848-c21f68c6aa98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3RvcmN5Y2xlJTIwaGVsbWV0fGVufDB8fHx8MTc1OTI2MDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motorcycle helmet"
     },
     {
       "id": "product3",
-      "description": "Mechanic working on a motorcycle engine.",
-      "imageUrl": "https://images.unsplash.com/photo-1616762393699-659771131a4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZWNoYW5pY2FsJTIwcGFydHN8ZW58MHx8fHwxNzU5MjU5NDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mechanical parts"
+      "description": "Close-up of a high-performance motorcycle brake disc.",
+      "imageUrl": "https://images.unsplash.com/photo-1616762393699-659771131a4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3RvcmN5Y2xlJTIwcGFydHN8ZW58MHx8fHwxNzU5MjYwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motorcycle parts"
     },
     {
       "id": "product4",
-      "description": "Person holding wires and electrical components.",
-      "imageUrl": "https://images.unsplash.com/photo-1581092918422-b53556d8e041?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwcGFydHN8ZW58MHx8fHwxNzU5MjU5NDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "electrical parts"
+      "description": "Electric motorcycle charging station.",
+      "imageUrl": "https://images.unsplash.com/photo-1633931928485-a7fbd3381a17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMG1vdG9yY3ljbGUlMjBjaGFyZ2VyfGVufDB8fHx8MTc1OTI2MDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motorcycle charger"
     },
     {
       "id": "testimonial1",
-      "description": "Avatar for a customer testimonial.",
-      "imageUrl": "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzU5MTA5ODM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman smiling"
+      "description": "Portrait of a happy customer.",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc1OTI2MDAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man smiling"
     },
     {
       "id": "testimonial2",
-      "description": "Avatar for a customer testimonial.",
-      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkxMDU0Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "description": "Portrait of a satisfied customer.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzU5MjYwMDAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
     },
     {
       "id": "testimonial3",
-      "description": "Avatar for a customer testimonial.",
-      "imageUrl": "https://images.unsplash.com/photo-1607031542107-f6f46b5d54e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkwNzk5MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Portrait of a biker.",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTkyNjAwMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
       "id": "hero",
-      "description": "Modelo segurando produtos da Veentto em um fundo de estúdio.",
-      "imageUrl": "https://images.unsplash.com/photo-1670201202815-ca549e223c6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZWwlMjBwcm9kdWN0c3xlbnwwfHx8fDE3NTkxNjM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "model products"
+      "description": "A sleek, futuristic electric motorcycle on a dark, moody background.",
+      "imageUrl": "https://images.unsplash.com/photo-1675091278919-e511394a11b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "futuristic motorcycle"
     }
   ]
 }
