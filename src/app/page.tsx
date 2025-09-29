@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ShoppingCart,
@@ -22,6 +22,13 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -85,22 +92,25 @@ const ProductCard = ({
     </div>
     <div className="p-6 space-y-3 flex-grow flex flex-col">
       <h3 className="text-lg font-semibold text-zinc-100">{title}</h3>
-      {price && <p className="text-3xl font-bold text-zinc-50">{price}</p>}
+      
       {children ? (
         <div className="flex-grow">{children}</div>
       ) : (
-        <div className="flex gap-4 text-zinc-400 text-sm">
-          {range && (
-            <span className="flex items-center gap-2">
-              <Battery className="w-4 h-4" /> {range}
-            </span>
-          )}
-          {speed && (
-            <span className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4" /> {speed}
-            </span>
-          )}
-        </div>
+        <>
+          {price && <p className="text-3xl font-bold text-zinc-50">{price}</p>}
+          <div className="flex gap-4 text-zinc-400 text-sm flex-grow">
+            {range && (
+              <span className="flex items-center gap-2">
+                <Battery className="w-4 h-4" /> {range}
+              </span>
+            )}
+            {speed && (
+              <span className="flex items-center gap-2">
+                <Sparkles className="w-4 h-4" /> {speed}
+              </span>
+            )}
+          </div>
+        </>
       )}
       <div className="pt-3 flex gap-3 mt-auto">
         <a
@@ -122,52 +132,61 @@ const ProductCard = ({
   </motion.div>
 );
 
-const BrizaTable = () => {
-  const data48V = [
-    { ah: '15Ah', price: '1.210,00 €', range: '~30 km' },
-    { ah: '20Ah', price: '1.450,00 €', range: '~35 km' },
-    { ah: '24Ah', price: '1.570,00 €', range: '~50 km' },
-    { ah: '30Ah', price: '1.690,00 €', range: '~65 km' },
+const BrizaOptions = () => {
+  const options = [
+    { id: '48V-15Ah', voltage: '48V', ah: '15Ah', price: '1.210,00 €', range: '~30 km' },
+    { id: '48V-20Ah', voltage: '48V', ah: '20Ah', price: '1.450,00 €', range: '~35 km' },
+    { id: '48V-24Ah', voltage: '48V', ah: '24Ah', price: '1.570,00 €', range: '~50 km' },
+    { id: '48V-30Ah', voltage: '48V', ah: '30Ah', price: '1.690,00 €', range: '~65 km' },
+    { id: '60V-20Ah', voltage: '60V', ah: '20Ah', price: '1.450,00 €', range: '~50 km' },
+    { id: '60V-24Ah', voltage: '60V', ah: '24Ah', price: '1.650,00 €', range: '~60 km' },
+    { id: '60V-30Ah', voltage: '60V', ah: '30Ah', price: '1.850,00 €', range: '~70 km' },
   ];
-  const data60V = [
-    { ah: '20Ah', price: '1.450,00 €', range: '~50 km' },
-    { ah: '24Ah', price: '1.650,00 €', range: '~60 km' },
-    { ah: '30Ah', price: '1.850,00 €', range: '~70 km' },
-  ];
+  
+  const [selectedOption, setSelectedOption] = useState(options[0]);
 
-  const renderTable = (voltage: string, data: typeof data48V) => (
-    <>
-      <h4 className="font-semibold text-zinc-200 mt-4 mb-2">
-        <Battery className="w-4 h-4 inline mr-2" /> Modelos com bateria {voltage}
-      </h4>
-      <Table className="text-zinc-400 text-xs">
-        <TableHeader>
-          <TableRow className="border-zinc-800">
-            <TableHead className="text-zinc-300">Bateria</TableHead>
-            <TableHead className="text-zinc-300">Autonomia</TableHead>
-            <TableHead className="text-right text-zinc-300">Preço</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {data.map((item) => (
-            <TableRow key={item.ah} className="border-zinc-800">
-              <TableCell>{item.ah}</TableCell>
-              <TableCell>{item.range}</TableCell>
-              <TableCell className="text-right">{item.price}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </>
-  );
+  const handleSelect = (value: string) => {
+    const option = options.find(o => o.id === value);
+    if (option) {
+      setSelectedOption(option);
+    }
+  };
 
   return (
-    <div className="text-sm">
-      {renderTable('48V', data48V)}
-      {renderTable('60V', data60V)}
-       <p className="flex items-center gap-2 text-zinc-400 text-xs mt-3">
-          <Sparkles className="w-4 h-4" /> Até 25 km/h
-        </p>
+    <div className="space-y-4">
+       <p className="text-3xl font-bold text-zinc-50">{selectedOption.price}</p>
+       <div className="flex gap-4 text-zinc-400 text-sm">
+          <span className="flex items-center gap-2">
+            <Battery className="w-4 h-4" /> {selectedOption.range}
+          </span>
+          <span className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4" /> Até 25 km/h
+          </span>
+        </div>
+      <div>
+        <label className="text-xs text-zinc-400">Opções de bateria</label>
+        <Select onValueChange={handleSelect} defaultValue={selectedOption.id}>
+          <SelectTrigger className="w-full bg-zinc-800 border-zinc-700 text-zinc-200">
+            <SelectValue placeholder="Selecione uma opção" />
+          </SelectTrigger>
+          <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-200">
+            <optgroup label="Modelos 48V">
+              {options.filter(o => o.voltage === '48V').map(option => (
+                <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
+                  {option.ah} ({option.range})
+                </SelectItem>
+              ))}
+            </optgroup>
+            <optgroup label="Modelos 60V">
+              {options.filter(o => o.voltage === '60V').map(option => (
+                <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
+                  {option.ah} ({option.range})
+                </SelectItem>
+              ))}
+            </optgroup>
+          </SelectContent>
+        </Select>
+      </div>
     </div>
   );
 };
@@ -304,7 +323,7 @@ export default function OnePageVelocipedes() {
               speed="Até 25 km/h"
             />
             <ProductCard title="Scooter Briza">
-              <BrizaTable />
+              <BrizaOptions />
             </ProductCard>
             <ProductCard
               title="Scooter Nice"
