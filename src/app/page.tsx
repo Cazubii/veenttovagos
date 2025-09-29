@@ -124,6 +124,66 @@ const ProductCard = ({
   </motion.div>
 );
 
+const PowerOptions = () => {
+  const options = [
+    { id: '48V-15Ah-P', voltage: '48V', ah: '15Ah', price: '990,00 €', range: 'Aprox: 40 km' },
+    { id: '48V-20Ah-P', voltage: '48V', ah: '20Ah', price: '1.290,00 €', range: 'Aprox: 50 km' },
+    { id: '48V-24Ah-P', voltage: '48V', ah: '24Ah', price: '1.420,00 €', range: 'Aprox: 60 km' },
+    { id: '48V-30Ah-P', voltage: '48V', ah: '30Ah', price: '1.560,00 €', range: 'Aprox: 70 km' },
+    { id: '60V-20Ah-P', voltage: '60V', ah: '20Ah', price: '1.390,00 €', range: 'Aprox: 50 km' },
+    { id: '60V-24Ah-P', voltage: '60V', ah: '24Ah', price: '1.520,00 €', range: 'Aprox: 65 km' },
+    { id: '60V-30Ah-P', voltage: '60V', ah: '30Ah', price: '1.650,00 €', range: 'Aprox: 80 km' },
+  ];
+  
+  const [selectedOption, setSelectedOption] = useState(options[0]);
+
+  const handleSelect = (value: string) => {
+    const option = options.find(o => o.id === value);
+    if (option) {
+      setSelectedOption(option);
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+       <p className="text-3xl font-bold text-zinc-50">{selectedOption.price}</p>
+       <div className="flex gap-4 text-zinc-400 text-sm">
+          <span className="flex items-center gap-2">
+            <Battery className="w-4 h-4" /> {selectedOption.range}
+          </span>
+          <span className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4" /> Até 25 km/h
+          </span>
+        </div>
+      <div>
+        <label className="text-xs text-zinc-400">Opções de bateria</label>
+        <Select onValueChange={handleSelect} defaultValue={selectedOption.id}>
+          <SelectTrigger className="w-full bg-zinc-800 border-zinc-700 text-zinc-200">
+            <SelectValue placeholder="Selecione uma opção" />
+          </SelectTrigger>
+          <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-200">
+            <optgroup label="Modelos 48V">
+              {options.filter(o => o.voltage === '48V').map(option => (
+                <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
+                  {option.voltage} {option.ah} ({option.range})
+                </SelectItem>
+              ))}
+            </optgroup>
+            <optgroup label="Modelos 60V">
+              {options.filter(o => o.voltage === '60V').map(option => (
+                <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
+                  {option.voltage} {option.ah} ({option.range})
+                </SelectItem>
+              ))}
+            </optgroup>
+          </SelectContent>
+        </Select>
+      </div>
+    </div>
+  );
+};
+
+
 const BrizaOptions = () => {
   const options = [
     { id: '48V-15Ah', voltage: '48V', ah: '15Ah', price: '1.210,00 €', range: 'Aprox: 30 km' },
@@ -308,12 +368,9 @@ export default function OnePageVelocipedes() {
             </a>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
-            <ProductCard
-              title="Scooter Power"
-              price="990,00 €"
-              range="30 km"
-              speed="Até 25 km/h"
-            />
+            <ProductCard title="Scooter Power">
+              <PowerOptions />
+            </ProductCard>
             <ProductCard title="Scooter Briza">
               <BrizaOptions />
             </ProductCard>
