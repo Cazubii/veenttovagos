@@ -15,14 +15,6 @@ import {
   MessageSquare,
 } from 'lucide-react';
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import {
   Select,
   SelectContent,
   SelectItem,
@@ -570,3 +562,5 @@ export default function OnePageVelocipedes() {
     </div>
   );
 }
+
+    
