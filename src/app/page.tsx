@@ -14,6 +14,7 @@ import {
   Sparkles,
   ChevronRight,
   MessageSquare,
+  Instagram,
 } from 'lucide-react';
 import {
   Select,
@@ -706,7 +707,7 @@ export default function OnePageVelocipedes() {
 
       <footer id="contato" className="border-t border-zinc-800 mt-16">
         <Section className="py-12" id={''} >
-          <div className="grid md:grid-cols-3 gap-8 text-sm">
+          <div className="grid md:grid-cols-4 gap-8 text-sm">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <VeenttoLogo className="w-24 h-auto text-zinc-100" />
@@ -739,6 +740,22 @@ export default function OnePageVelocipedes() {
                   </a>
                 </li>
                 <li>Loja: Rua Dom Antonio dos Santos, 109B - Quintã, Vagos</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-zinc-100 mb-3">Redes Sociais</h4>
+              <ul className="space-y-2 text-zinc-400">
+                <li>
+                  <a
+                    className="flex items-center gap-2 hover:text-zinc-200"
+                    href="https://www.instagram.com/veenttovagos"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Instagram className="w-4 h-4" />
+                    Instagram
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
