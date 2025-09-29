@@ -1,43 +1,29 @@
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero');
-
   return (
-    <section className="relative w-full overflow-hidden">
-      <div className="container grid md:grid-cols-2 gap-8 items-center">
-        <div className="relative z-10 animate-in fade-in slide-in-from-bottom-12 duration-1000 text-center md:text-left">
-          <div className="py-12 md:py-24">
-            <h1 className="font-headline text-5xl font-extrabold tracking-tight md:text-6xl lg:text-7xl">
-              Cabelo & Corpo
-              <br />
-              <span className="text-primary">Perfumados</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg text-muted-foreground md:text-xl mx-auto md:mx-0">
-              Conheça nossas linhas de Body Splash e Hair Mist e se apaixone por
-              fragrâncias que te acompanham o dia todo.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-              <Button size="lg" asChild>
-                <Link href="#products">Ver Produtos</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="relative h-96 md:h-full min-h-[60vh] animate-in fade-in duration-1000">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={heroImage.imageHint}
-              priority
-            />
-          )}
+    <section
+      className="relative w-full py-20 md:py-32 bg-primary text-primary-foreground"
+      style={{
+        backgroundImage:
+          "repeating-linear-gradient(45deg, rgba(0,0,0,0.8) 25px, rgba(0,0,0,0.8) 50px, transparent 50px, transparent 75px, rgba(0,0,0,0.8) 75px), repeating-linear-gradient(-45deg, rgba(0,0,0,0.8) 25px, rgba(0,0,0,0.8) 50px, transparent 50px, transparent 75px, rgba(0,0,0,0.8) 75px)",
+        backgroundSize: '100px 100px',
+      }}
+    >
+      <div className="container mx-auto px-4 text-center">
+        <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter">
+          Alerta!
+        </h1>
+        <p className="mt-2 text-4xl md:text-6xl font-bold text-white uppercase">
+          Seguro Obrigatório
+        </p>
+        <div className="mt-8">
+          <Button
+            size="lg"
+            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 py-4"
+          >
+            Consulte seu agente de seguros
+          </Button>
         </div>
       </div>
     </section>

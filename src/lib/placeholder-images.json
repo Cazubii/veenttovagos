@@ -2,27 +2,27 @@
   "placeholderImages": [
     {
       "id": "product1",
-      "description": "Frasco de Body Splash Veentto com líquido rosa claro.",
-      "imageUrl": "https://images.unsplash.com/photo-1682965636756-332746a1cc28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxib2R5JTIwc3BsYXNofGVufDB8fHx8MTc1OTE2MzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "body splash"
+      "description": "Red electric scooter parked on a city street.",
+      "imageUrl": "https://images.unsplash.com/photo-1593032469478-6eea26403254?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMG1vdG9yY3ljbGV8ZW58MHx8fHwxNzU5MjU5MzY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electric motorcycle"
     },
     {
       "id": "product2",
-      "description": "Frasco de Hair Mist Veentto com líquido transparente.",
-      "imageUrl": "https://images.unsplash.com/photo-1586835319938-307d4746d12d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYWlyJTIwbWlzdHxlbnwwfHx8fDE3NTkxNjM0MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "hair mist"
+      "description": "Red motorcycle helmet on a wooden surface.",
+      "imageUrl": "https://images.unsplash.com/photo-1576426863848-c21f68c6aa98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb3RvcmN5Y2xlJTIwYWNjZXNzb3JpZXN8ZW58MHx8fHwxNzU5MjU5Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "motorcycle accessories"
     },
     {
       "id": "product3",
-      "description": "Kit com Body Splash e Hair Mist da Veentto.",
-      "imageUrl": "https://images.unsplash.com/photo-1599602502345-f0a25940cbec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9kdWN0JTIwa2l0fGVufDB8fHx8MTc1OTE2MzQwM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "product kit"
+      "description": "Mechanic working on a motorcycle engine.",
+      "imageUrl": "https://images.unsplash.com/photo-1616762393699-659771131a4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZWNoYW5pY2FsJTIwcGFydHN8ZW58MHx8fHwxNzU5MjU5NDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mechanical parts"
     },
     {
       "id": "product4",
-      "description": "A collection of makeup items.",
-      "imageUrl": "https://images.unsplash.com/photo-1627435601550-406e8683be82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWtldXAlMjBjb2xsZWN0aW9ufGVufDB8fHx8MTc1OTEzNTE4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "makeup collection"
+      "description": "Person holding wires and electrical components.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092918422-b53556d8e041?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwcGFydHN8ZW58MHx8fHwxNzU5MjU5NDQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electrical parts"
     },
     {
       "id": "testimonial1",
