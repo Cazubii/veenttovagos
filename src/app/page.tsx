@@ -260,6 +260,55 @@ const BrizaOptions = () => {
   );
 };
 
+const TricicloOptions = () => {
+  const options = [
+    { id: 'tri-48V-20Ah', voltage: '48V', ah: '20Ah', price: '1.690,00 €', range: 'Aprox: 40 km' },
+    { id: 'tri-48V-24Ah', voltage: '48V', ah: '24Ah', price: '1.840,00 €', range: 'Aprox: 50 km' },
+    { id: 'tri-48V-30Ah', voltage: '48V', ah: '30Ah', price: '1.990,00 €', range: 'Aprox: 70 km' },
+  ];
+  
+  const [selectedOption, setSelectedOption] = useState(options[0]);
+
+  const handleSelect = (value: string) => {
+    const option = options.find(o => o.id === value);
+    if (option) {
+      setSelectedOption(option);
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+       <p className="text-3xl font-bold text-zinc-50">{selectedOption.price}</p>
+       <div className="flex gap-4 text-zinc-400 text-sm">
+          <span className="flex items-center gap-2">
+            <Battery className="w-4 h-4" /> {selectedOption.range}
+          </span>
+          <span className="flex items-center gap-2">
+            <Sparkles className="w-4 h-4" /> Até 25 km/h
+          </span>
+        </div>
+      <div>
+        <label className="text-xs text-zinc-400">Opções de bateria</label>
+        <Select onValueChange={handleSelect} defaultValue={selectedOption.id}>
+          <SelectTrigger className="w-full bg-zinc-800 border-zinc-700 text-zinc-200">
+            <SelectValue placeholder="Selecione uma opção" />
+          </SelectTrigger>
+          <SelectContent className="bg-zinc-900 border-zinc-800 text-zinc-200">
+            <SelectGroup>
+              <SelectLabel>Modelos 48V</SelectLabel>
+              {options.filter(o => o.voltage === '48V').map(option => (
+                <SelectItem key={option.id} value={option.id} className="focus:bg-zinc-800">
+                  {option.voltage} {option.ah} ({option.range})
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+    </div>
+  );
+};
+
 export default function OnePageVelocipedes() {
   const scooterPowerImage = PlaceHolderImages.find(img => img.id === 'scooter-power');
 
@@ -399,12 +448,9 @@ export default function OnePageVelocipedes() {
               range="30 km"
               speed="Até 25 km/h"
             />
-            <ProductCard
-              title="Triciclo"
-              price="1.690,00 €"
-              range="40 km"
-              speed="Até 25 km/h"
-            />
+            <ProductCard title="Triciclo">
+              <TricicloOptions />
+            </ProductCard>
             <ProductCard
               title="Quaciclo Guido"
               price="2.890,00 €"
