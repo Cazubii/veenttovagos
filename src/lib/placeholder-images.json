@@ -45,7 +45,7 @@
     {
       "id": "hero",
       "description": "A sleek, futuristic electric motorcycle on a dark, moody background.",
-      "imageUrl": "https://images.unsplash.com/photo-1675091278919-e511394a11b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/scooter-power.png",
       "imageHint": "futuristic motorcycle"
     },
     {
@@ -53,6 +53,24 @@
       "description": "White electric scooter model Power.",
       "imageUrl": "https://storage.googleapis.com/aai-web-samples/scooter-power.png",
       "imageHint": "white scooter"
+    },
+    {
+      "id": "scooter-briza",
+      "description": "Red electric scooter model Briza.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/scooter-briza.png",
+      "imageHint": "red scooter"
+    },
+    {
+      "id": "scooter-nice",
+      "description": "Blue electric scooter model Nice.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/scooter-nice.png",
+      "imageHint": "blue scooter"
+    },
+    {
+      "id": "triciclo",
+      "description": "Black electric tricycle.",
+      "imageUrl": "https://storage.googleapis.com/aai-web-samples/triciclo.png",
+      "imageHint": "black tricycle"
     }
   ]
 }

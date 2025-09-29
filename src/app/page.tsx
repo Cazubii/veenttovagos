@@ -374,6 +374,10 @@ const NiceOptions = () => {
 
 export default function OnePageVelocipedes() {
   const scooterPowerImage = PlaceHolderImages.find(img => img.id === 'scooter-power');
+  const scooterBrizaImage = PlaceHolderImages.find(img => img.id === 'scooter-briza');
+  const scooterNiceImage = PlaceHolderImages.find(img => img.id === 'scooter-nice');
+  const tricicloImage = PlaceHolderImages.find(img => img.id === 'triciclo');
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero');
 
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-900 via-black to-black text-zinc-200">
@@ -464,7 +468,17 @@ export default function OnePageVelocipedes() {
             className="relative"
           >
             <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-2xl border border-zinc-800 grid place-items-center">
-              <Bike className="w-40 h-40 text-zinc-600" aria-hidden />
+              {heroImage ? (
+                <Image
+                  src={heroImage.imageUrl}
+                  alt={heroImage.description}
+                  fill
+                  className="object-contain"
+                  data-ai-hint={heroImage.imageHint}
+                />
+              ) : (
+                <Bike className="w-40 h-40 text-zinc-600" aria-hidden />
+              )}
             </div>
           </motion.div>
         </div>
@@ -492,13 +506,13 @@ export default function OnePageVelocipedes() {
             <ProductCard title="Scooter Power" image={scooterPowerImage}>
               <PowerOptions />
             </ProductCard>
-            <ProductCard title="Scooter Briza">
+            <ProductCard title="Scooter Briza" image={scooterBrizaImage}>
               <BrizaOptions />
             </ProductCard>
-            <ProductCard title="Scooter Nice">
+            <ProductCard title="Scooter Nice" image={scooterNiceImage}>
               <NiceOptions />
             </ProductCard>
-            <ProductCard title="Triciclo">
+            <ProductCard title="Triciclo" image={tricicloImage}>
               <TricicloOptions />
             </ProductCard>
             <ProductCard
