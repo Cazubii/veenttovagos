@@ -452,7 +452,7 @@ export default function OnePageVelocipedes() {
                 <Leaf className="w-4 h-4" /> Zero emissões
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" /> Garantia 12 meses
+                <Shield className="w-4 h-4" /> Garantia até 24 meses
               </div>
               <div className="flex items-center gap-2">
                 <Battery className="w-4 h-4" /> Autonomia até 70 km*
@@ -617,7 +617,7 @@ export default function OnePageVelocipedes() {
               },
               {
                 q: 'Há garantia?',
-                a: 'Sim, 12 meses de garantia contra defeitos de fabrico.',
+                a: 'Sim, 24 meses de garantia no veículo e 1 ano na bateria contra defeitos de fabrico.',
               },
             ].map((item, i) => (
               <details
@@ -742,5 +742,3 @@ export default function OnePageVelocipedes() {
     </div>
   );
 }
-
-    
