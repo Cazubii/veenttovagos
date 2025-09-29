@@ -318,7 +318,7 @@ export default function OnePageVelocipedes() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
             <ProductCard
               title="Scooter Power"
-              price="€990,00"
+              price="990,00 €"
               range="30 km"
               speed="Até 25 km/h"
             />
@@ -327,19 +327,19 @@ export default function OnePageVelocipedes() {
             </ProductCard>
             <ProductCard
               title="Scooter Nice"
-              price="€1.250,00"
+              price="1.250,00 €"
               range="30 km"
               speed="Até 25 km/h"
             />
             <ProductCard
               title="Triciclo"
-              price="€1.690,00"
+              price="1.690,00 €"
               range="40 km"
               speed="Até 25 km/h"
             />
             <ProductCard
               title="Quaciclo Guido"
-              price="€2.890,00"
+              price="2.890,00 €"
               range="50 km"
               speed="Até 25 km/h"
             />
