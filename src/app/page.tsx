@@ -25,6 +25,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { PlaceHolderImages, type ImagePlaceholder } from '@/lib/placeholder-images';
+import { VeenttoLogo } from '@/components/veentto-logo';
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -378,12 +380,7 @@ export default function OnePageVelocipedes() {
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/30 border-b border-zinc-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-zinc-100 text-zinc-900 grid place-items-center font-bold">
-              VV
-            </div>
-            <span className="text-sm md:text-base font-semibold tracking-wide text-zinc-100">
-              Veentto Vagos
-            </span>
+            <VeenttoLogo className="w-24 h-auto text-zinc-100" />
           </a>
           <nav className="hidden md:flex items-center gap-6">
             <NavLink href="#produtos">Produtos</NavLink>
@@ -703,12 +700,7 @@ export default function OnePageVelocipedes() {
           <div className="grid md:grid-cols-3 gap-8 text-sm">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-zinc-100 text-zinc-900 grid place-items-center font-bold">
-                  VV
-                </div>
-                <span className="font-semibold text-zinc-100">
-                  Veentto Vagos
-                </span>
+                <VeenttoLogo className="w-24 h-auto text-zinc-100" />
               </div>
               <p className="text-zinc-400">
                 Mobilidade inteligente, sustentável e sem carta de condução.
