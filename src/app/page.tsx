@@ -791,5 +791,3 @@ export default function OnePageVelocipedes() {
     </div>
   );
 }
-
-    
