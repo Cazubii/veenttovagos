@@ -25,9 +25,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { PlaceHolderImages, type ImagePlaceholder } from '@/lib/placeholder-images';
+import { type ImagePlaceholder } from '@/lib/placeholder-images';
+import imageData from '@/lib/placeholder-images.json';
 import { VeenttoLogo } from '@/components/veentto-logo';
 
+const { placeholderImages: PlaceHolderImages } = imageData;
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
