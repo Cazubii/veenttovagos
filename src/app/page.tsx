@@ -135,7 +135,7 @@ const ProductCard = ({
           rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-xl bg-zinc-100 text-zinc-900 px-4 py-2 hover:bg-white"
         >
-          <MessageSquare className="w-4 h-4" /> WhatsApp
+          <MessageSquare className="w-4 h-4" /> <span style={{color: '#25D366'}}>WhatsApp</span>
         </a>
       </div>
     </div>
@@ -409,7 +409,7 @@ export default function OnePageVelocipedes() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 px-3 py-2 hover:bg-zinc-800"
             >
-              <Phone className="w-4 h-4" /> WhatsApp
+              <Phone className="w-4 h-4" /> <span style={{color: '#25D366'}}>WhatsApp</span>
             </a>
           </div>
         </div>
@@ -448,7 +448,7 @@ export default function OnePageVelocipedes() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl border border-zinc-700 px-5 py-3 hover:bg-zinc-800"
               >
-                Falar no WhatsApp <MessageSquare className="w-4 h-4" />
+                Falar no <span style={{color: '#25D366'}}>WhatsApp</span> <MessageSquare className="w-4 h-4" />
               </a>
             </div>
             <div className="flex items-center gap-6 pt-2 text-zinc-400 text-sm">
@@ -686,7 +686,7 @@ export default function OnePageVelocipedes() {
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
             Marque um test drive gratuito ou fale já connosco para simulação a
-            prestações. Resposta rápida no WhatsApp.
+            prestações. Resposta rápida no <span style={{color: '#25D366'}}>WhatsApp</span>.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
@@ -695,7 +695,7 @@ export default function OnePageVelocipedes() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-zinc-100 text-zinc-900 px-6 py-3 text-lg hover:bg-white"
             >
-              <MessageSquare className="w-5 h-5" /> Falar no WhatsApp
+              <MessageSquare className="w-5 h-5" /> Falar no <span style={{color: '#25D366'}}>WhatsApp</span>
             </a>
             <a
               href="#produtos"
@@ -722,7 +722,7 @@ export default function OnePageVelocipedes() {
               <h4 className="font-semibold text-zinc-100 mb-3">Contactos</h4>
               <ul className="space-y-2 text-zinc-400">
                 <li>
-                  WhatsApp:{' '}
+                  <span style={{color: '#25D366'}}>WhatsApp</span>:{' '}
                   <a
                     className="underline hover:text-zinc-200"
                     href="https://wa.me/351928272818"
