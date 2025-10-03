@@ -374,12 +374,11 @@ const NiceOptions = () => {
 };
 
 export default function OnePageVelocipedes() {
-  const images = PlaceHolderImages;
-  const scooterPowerImage = images.find(img => img.id === 'scooter-power');
-  const scooterBrizaImage = images.find(img => img.id === 'scooter-briza');
-  const scooterNiceImage = images.find(img => img.id === 'scooter-nice');
-  const tricicloImage = images.find(img => img.id === 'triciclo');
-  const heroImage = images.find(img => img.id === 'hero');
+  const scooterPowerImage = PlaceHolderImages.find(img => img.id === 'scooter-power');
+  const scooterBrizaImage = PlaceHolderImages.find(img => img.id === 'scooter-briza');
+  const scooterNiceImage = PlaceHolderImages.find(img => img.id === 'scooter-nice');
+  const tricicloImage = PlaceHolderImages.find(img => img.id === 'triciclo');
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hero');
 
   return (
     <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-900 via-black to-black text-zinc-200">
